@@ -1,3 +1,4 @@
+# Maintainer: Jan Alexander Steffens (heftig) <jan.steffens@gmail.com>
 # Maintainer: Levente Polyak <anthraxx[at]archlinux[dot]org>
 # Contributor: Anatol Pomozov <anatol dot pomozov at gmail>
 
