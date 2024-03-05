@@ -64,7 +64,7 @@ pkgbase = meson
 	source = cross-lib32
 	source = native-clang
 	source = 0001-Skip-broken-tests.patch
-	source = 0002-Limit-unittests-workers.patch
+	source = 0002-tests-Fix-unit-tests-with-high-parallelism.patch
 	validpgpkeys = 19E2D6D9B46D8DAA6288F877C24E631BABB1FE70
 	b2sums = 72b061598a0cb22517460de4df25394a9dfbddb536c5b8e75b7267ae21292fe2a6a3ec16d64aa81cde63d33022decebcc051cf2d87d677f9b40eb2f4106a40cd
 	b2sums = SKIP
@@ -74,6 +74,6 @@ pkgbase = meson
 	b2sums = 9b16477aa77a706492e26fb3ad42e90674b8f0dfe657dd3bd9ba044f921be12ceabeb0050a50a15caee4d999e1ec33ed857bd3bed9e4444d73bb4a4f06381081
 	b2sums = 7d88929d5a3b49d91c5c9969f19d9b47f3151706526b889515acaeda0141257d5115875ac84832e9ea46f83a7700d673adcc5db84b331cd798c70ae6e90eac1e
 	b2sums = ebcd0d961bdc00309aa76e93e49c7136c454d1d1838c6bf5a5b168c0a94532353d32364de16c045f14950dd5313c17f33b3d7974317ba94db161638f93de6845
-	b2sums = 5847e2f1bf362c9fdaf522f0d3a6c81e67c7ac8c016e0ade5632bf23c1ea591c3659fe40f2139e97805144b3a6db6fe375977735b6fc74a7c7a6f8e581632f24
+	b2sums = 20bdec06bcb3413864670db135d8d94aaaa80102b8b91ed70acab3ed6e53596a7c23a8e49d087c554faf956bb4daf517088eaafcfa68dd81c8829c1f64fd6b3b
 
 pkgname = meson
