@@ -16,10 +16,10 @@ into a tmpdir before modifying it.
  1 file changed, 20 insertions(+), 19 deletions(-)
 
 diff --git a/unittests/linuxliketests.py b/unittests/linuxliketests.py
-index 6e07c450aa0a..d5bff0383604 100644
+index f66dc9769a8f..c8dc0195bc72 100644
 --- a/unittests/linuxliketests.py
 +++ b/unittests/linuxliketests.py
-@@ -1460,25 +1460,26 @@ class LinuxlikeTests(BasePlatformTests):
+@@ -1413,25 +1413,26 @@ class LinuxlikeTests(BasePlatformTests):
          Test that installation of broken symlinks works fine.
          https://github.com/mesonbuild/meson/issues/3914
          '''
