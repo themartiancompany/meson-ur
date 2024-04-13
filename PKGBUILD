@@ -8,9 +8,10 @@ pkgrel=3
 pkgdesc="High productivity build system"
 url="https://mesonbuild.com/"
 arch=(any)
-license=(Apache)
+license=(Apache-2.0)
 depends=(
   ninja
+  python
   python-tqdm
   python-typing_extensions
 )
