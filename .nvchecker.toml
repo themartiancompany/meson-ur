@@ -1,0 +1,3 @@
+[meson]
+source = "git"
+git = "https://github.com/mesonbuild/meson.git"
