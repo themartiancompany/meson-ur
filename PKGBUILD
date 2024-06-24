@@ -3,7 +3,7 @@
 # Contributor: Anatol Pomozov <anatol dot pomozov at gmail>
 
 pkgname=meson
-pkgver=1.4.1
+pkgver=1.5.0rc1
 pkgrel=1
 pkgdesc="High productivity build system"
 url="https://mesonbuild.com/"
@@ -30,6 +30,7 @@ checkdepends=(
   gcc-fortran
   gcc-objc
   git
+  glib2-devel
   glibc-locales
   gmock
   gnustep-base
@@ -74,17 +75,15 @@ source=(
   cross-lib32
   native-clang
   0001-Skip-broken-tests.patch
-  0002-cuda-avoid-test-failure-without-GPU-available.patch
 )
-b2sums=('1eb83ad34d9e0a80eaf667a5edf04cf40ff043c0b9e8c78c5bd553eb2dae372b4c0dc8e30760da0321b7c33d331304c21c7f51d2133681c9fa66d551039952f3'
+b2sums=('1e0d9e350532a75c8db8295dba4e12527eca9be21cf9dfd55f86fb4f063c618e93c5f579c23ddebf322a3c2e29fbad41ce9051565bd997c3b234d7eb6c3a0f60'
         'SKIP'
-        'a0ea6a1dd599c0a559dae64772f730ac7cad7df3ea63acc8355ff933152873567803efff012e6ea0a4c75ef9c8be023a8d927411a49e43de20bbfc69b1263488'
-        'f44fdcb30d576e1f94d184963a379745c7ff8561622151f2ecd2c03de854bc2c9b4e1162c34dc8c6a367f16c7307044691f7e43076725bce66c979e4f4a5ce5f'
+        'aaa8b32db40cfcb91fab2a147e7d4ca77e934606f630eda3362adeaa2f25df25ee4393876a4c4e5a6320ec4c4c689dcb2f8d0560d74b694c61d9449da44fd508'
+        'a750ef650eaff3b7e38237b07cc0d6432f7edc41bf9309157ccaa66d097855a4268ea60b569713fb8666c992ceabaf45f89ff76296c6ccebc15fb77adcad3a1b'
         '70f042a7603d1139f6cef33aec028da087cacabe278fd47375e1b2315befbfde1c0501ad1ecc63d04d31b232a04f08c735d61ce59d7244521f3d270e417fb5af'
         '9b16477aa77a706492e26fb3ad42e90674b8f0dfe657dd3bd9ba044f921be12ceabeb0050a50a15caee4d999e1ec33ed857bd3bed9e4444d73bb4a4f06381081'
         '7d88929d5a3b49d91c5c9969f19d9b47f3151706526b889515acaeda0141257d5115875ac84832e9ea46f83a7700d673adcc5db84b331cd798c70ae6e90eac1e'
-        'ba31657ec0362795c95ada7a3d903f34aa04effe2594cc8b7731f8de1d5407350855bc438b8d79cae45726283f22be5e8dbf18fc7a119f410e4a110441d4f79b'
-        '0318ef99fbb9e268496e75e6ec584b65fb961dc5b4b37b43f14485ebfce197688f5d9f434ec028011a2c7b720581e346075905520d10863e1b36a65d18de0289')
+        'ee2b3a174c86affd7b5c26128eda7c51f8b223184eb4a67d957fb32a1396068e5b2613bfdb142134e4ceb8b64dd4464fad3a73e2b4087e0a87f9d0ccb83203d8')
 validpgpkeys=(
   19E2D6D9B46D8DAA6288F877C24E631BABB1FE70  # Jussi Pakkanen <jpakkane@gmail.com>
 )
@@ -94,10 +93,6 @@ prepare() {
 
   # Pass tests
   patch -Np1 -i ../0001-Skip-broken-tests.patch
-
-  # https://github.com/mesonbuild/meson/issues/13269
-  # https://github.com/mesonbuild/meson/pull/13273
-  patch -Np1 -i ../0002-cuda-avoid-test-failure-without-GPU-available.patch
 }
 
 build() {
