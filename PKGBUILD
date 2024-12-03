@@ -7,6 +7,15 @@
 # Contributor: Anatol Pomozov <anatol dot pomozov at gmail>
 
 _py="python"
+_pyver="$( \
+  "${_py}" \
+    -V | \
+    awk \
+      '{print $2}')"
+_pymajver="${_pyver%.*}"
+_pyminver="${_pymajver#*.}"
+_pynextver="${_pymajver%.*}.$(( \
+  ${_pyminver} + 1))"
 _pkg=meson
 pkgname="${_pkg}"
 pkgver=1.6.0
@@ -23,7 +32,8 @@ license=(
 depends=(
   bash
   ninja
-  "${_py}"
+  "${_py}>=${_pymajver}"
+  "${_py}<${_pynextver}"
   "${_py}-tqdm"
 )
 makedepends=(
